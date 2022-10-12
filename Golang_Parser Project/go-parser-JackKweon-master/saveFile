@@ -1,0 +1,120 @@
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"log"
+	"os"
+	//	"bytes"
+	"regexp"
+	"unicode"
+)
+
+func main() {
+
+	fmt.Println("Processing Input File input.txt")
+	file, err := os.Open("test0.cpl")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer file.Close()
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan()	{
+		fmt.Println(scanner.Text())
+	}
+	if err := scanner.Err(); err != nil {
+		log.Fatal(err)
+	}
+
+
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Println("Enter a string: ")
+	input, _ := reader.ReadString('\n')
+	// Declare regular expressions 'handlers'
+	id_regex, _ := regexp.Compile("^[a-z][a-z]*")
+	num_regex, _ := regexp.Compile("^[0-9][0-9]*")
+	ws_regex, _ := regexp.Compile("^\\s")
+	//semi_regx, _ := regexp.Compile("^;")
+	//comma_regx, _ := regexp.Compile("^,")
+	//period_regx, _ := regexp.Compile("^\\.")
+	//lparen_regx, _ := regexp.Compile("^(")
+	//rparen_regx, _ := regexp.Compile("^)")
+	//assign_regx, _ := regexp.Compile("^=")
+	//tri_regx, _ := regexp.Compile("^triangle")
+	//square_regx, _ := regexp.Compile("^square")
+	//test_regx, _ := regexp.Compile("^test")
+	//point_regx, _ := regexp.Compile("^point")
+
+	// Program logic
+	flag := true
+	var current_position int
+	var current_char rune
+
+
+	for flag {
+		if input[0] == '+' {
+			fmt.Println("EQUALS")
+			input = input[1:]
+		} else if input[0] == '*' {
+			fmt.Println("TIMES")
+			input = input[1:]
+		} else if ws_regex.MatchString(input) {
+			input = input[1:]
+		} else if id_regex.MatchString(input){
+			current_position = 0
+			current_char = rune(input[current_position])
+			for unicode.IsLetter(current_char) {
+				current_position = current_position + 1
+				if current_position >= len(input){
+					break
+				}
+				current_char = rune(input[current_position])
+			}
+			lexeme := input[:current_position]
+			input = input[current_position:]
+			fmt.Println("ID", lexeme)
+
+
+		} else if num_regex.MatchString(input){
+			current_position = 0
+			current_char = rune(input[current_position])
+			for unicode.IsNumber(current_char) {
+				current_position = current_position + 1
+				if current_position >= len(input){
+					break
+				}
+				current_char = rune(input[current_position])
+			}
+			lexeme := input[:current_position]
+			input = input[current_position:]
+			fmt.Println("NUMBER", lexeme)
+
+		}else {
+			fmt.Println("Lexical Error")
+			flag = false
+		}
+		if len(input) == 0 {
+			flag = false
+		}/**else if period_regx.MatchString(input) {
+			fmt.Println("PERIOD")
+			input = input[1:]
+		} else if lparen_regx.MatchString(input) {
+			fmt.Println("LPAREN")
+			input = input[1:]
+		}else if rparen_regx.MatchString(input) {
+			fmt.Println("RPAREN")
+			input = input[1:]
+		}  else if semi_regx.MatchString(input) {
+			fmt.Println("SEMICOLON")
+			input = input[1:]
+		} else if comma_regx.MatchString(input) {
+			fmt.Println("COMMA")
+			input = input[1:]
+		}else if assign_regx.MatchString(input) {
+			fmt.Println("ASSIGN")
+			input = input[1:]
+		}**/
+	}
+}
+
+
