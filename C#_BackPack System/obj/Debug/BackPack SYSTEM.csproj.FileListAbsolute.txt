@@ -1,0 +1,7 @@
+C:\Users\jaedo\Desktop\Project1\BackPack SYSTEM\bin\Debug\BackPack SYSTEM.exe.config
+C:\Users\jaedo\Desktop\Project1\BackPack SYSTEM\bin\Debug\BackPack SYSTEM.exe
+C:\Users\jaedo\Desktop\Project1\BackPack SYSTEM\bin\Debug\BackPack SYSTEM.pdb
+C:\Users\jaedo\Desktop\Project1\BackPack SYSTEM\obj\Debug\BackPack SYSTEM.csprojAssemblyReference.cache
+C:\Users\jaedo\Desktop\Project1\BackPack SYSTEM\obj\Debug\BackPack SYSTEM.csproj.CoreCompileInputs.cache
+C:\Users\jaedo\Desktop\Project1\BackPack SYSTEM\obj\Debug\BackPack SYSTEM.exe
+C:\Users\jaedo\Desktop\Project1\BackPack SYSTEM\obj\Debug\BackPack SYSTEM.pdb
