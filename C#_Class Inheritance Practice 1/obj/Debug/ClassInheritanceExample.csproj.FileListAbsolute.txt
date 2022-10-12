@@ -1,0 +1,7 @@
+C:\Code\CSC3220\Examples\ClassInheritanceExample\bin\Debug\ClassInheritanceExample.exe.config
+C:\Code\CSC3220\Examples\ClassInheritanceExample\bin\Debug\ClassInheritanceExample.exe
+C:\Code\CSC3220\Examples\ClassInheritanceExample\bin\Debug\ClassInheritanceExample.pdb
+C:\Code\CSC3220\Examples\ClassInheritanceExample\obj\Debug\ClassInheritanceExample.csprojAssemblyReference.cache
+C:\Code\CSC3220\Examples\ClassInheritanceExample\obj\Debug\ClassInheritanceExample.csproj.CoreCompileInputs.cache
+C:\Code\CSC3220\Examples\ClassInheritanceExample\obj\Debug\ClassInheritanceExample.exe
+C:\Code\CSC3220\Examples\ClassInheritanceExample\obj\Debug\ClassInheritanceExample.pdb
