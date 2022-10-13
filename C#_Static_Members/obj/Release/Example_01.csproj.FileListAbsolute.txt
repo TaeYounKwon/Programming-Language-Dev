@@ -1,0 +1,6 @@
+C:\Code\CSC3220\Examples\Example_01\bin\Release\Example_01.exe.config
+C:\Code\CSC3220\Examples\Example_01\bin\Release\Example_01.exe
+C:\Code\CSC3220\Examples\Example_01\bin\Release\Example_01.pdb
+C:\Code\CSC3220\Examples\Example_01\obj\Release\Example_01.csproj.CoreCompileInputs.cache
+C:\Code\CSC3220\Examples\Example_01\obj\Release\Example_01.exe
+C:\Code\CSC3220\Examples\Example_01\obj\Release\Example_01.pdb
