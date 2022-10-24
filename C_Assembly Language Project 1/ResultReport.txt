@@ -1,0 +1,16 @@
+﻿ADD File
+Registery
+EAX = FFFFFF99 EBX = 009B3000 ECX = 00DD1005 EDX = 00DD1005 ESI = 00DD1005 EDI = 00DD1005 EIP = 00DD1018 ESP = 00B3FA00 EBP = 00B3FA0C EFL = 00000286 
+0x00DD4004 = 00000000 
+Memory
+0x00DD1010  a1 00 40 dd 00 83 c0 02 a3 04 40 dd 00 b8 00 00 00 00 c3 
+
+SUB File
+Registery
+EAX = FFFFFBAF EBX = 006DE000 ECX = 00571005 EDX = 00571005 ESI = 00571005 EDI = 00571005 EIP = 0057101A ESP = 008FFD64 EBP = 008FFD70 EFL = 00000296 
+0x00574004 = 00000000 
+Memory
+0x00571010  a1 00 40 57 00 2d e8 03 00 00 a3 04 40 57 00 b8 00 00 00 00 c3
+
+Because the number was orignally added to the value, the EAX value did not changed much(only increased by 2 which is 10 in binary, 0x2 in hexa). 
+One the other hands, the SUB file, All the register value changed because of subtracting value 1000. which is  0x3E8 in hexa, 1111101000 In binary)
